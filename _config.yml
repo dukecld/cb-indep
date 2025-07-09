@@ -1,0 +1,76 @@
+##########
+# collectionbuilder-csv
+# Jekyll Digital Collection Generator
+# https://github.com/CollectionBuilder/collectionbuilder-csv
+##########
+
+##########
+# URL VARIABLES
+#
+# site domain, full URL to the production location of your collection
+url: 
+# path to location on the domain if necessary e.g. /digital/hjccc
+# baseurl: 
+# location of code, the full url to your github repository
+source-code: 
+
+##########
+# SITE SETTINGS
+#
+# title of site appears in banner
+title: Grinnell College Physics Museum, prototype 0.0
+# tagline, a short phrase that will appear throughout the site in the top banner
+tagline: Explore the Grinnell College Physics Museum in the Noyce Science Center
+# description appears in meta tags and other locations
+# this description might appear in search result lists, keep around 160 characters max
+description: "The Grinnell College Physics Museum consists primarily of instruments and equipment used to teach physics or do physics research at Grinnell College.  The core of the collection are objects purchased or constructed from approximately 1882 to 1970.  In addition, the museum includes donated physics-related equipment, such as telephone and telegraph instruments and x-ray equipment.  It also includes an excellent collection of meteorites which the college obtained as payment for tuition. Approximately half of the collection is on display in the Noyce Science Center at Grinnell College"
+# keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
+keywords: physics,physics instruments,noyce
+# creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
+author: Charlie Duke, Professor Emeritus of Physics and Curator of the Physics Museum
+
+##########
+# COLLECTION SETTINGS
+#
+# Set the metadata for your collection (the name of the CSV file in your _data directory that describes the objects in your collection) 
+# Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
+#metadata: pmeta4-24-c
+metadata: cb-lc-2
+# page generation settings [optional!]
+# [optional: only used if you need to tweak CB defaults or generate from more than one data file]
+# page_gen:
+#   - data: 'demo-metadata'
+#     template: 'item'
+#     name: 'objectid'
+#     dir: 'items'
+#     extension: 'html' 
+#     filter: 'objectid'  
+
+##########
+# Site/Organization Branding 
+#   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
+#   To remove the branding, comment out these values, or delete them. 
+#
+organization-name: "Grinnell College"
+organization-link: https://www.grinnell.edu/
+organization-logo-banner: https://www.grinnell.edu/sites/default/files/site-logo/logo_0.png
+organization-logo-nav: https://www.grinnell.edu/sites/default/files/site-logo/logo_0.png
+
+##########
+# ROBOTS EXCLUDE
+#
+# set noindex to true if you do NOT want Google to index your site
+# noindex: true 
+
+##########
+# BUILD SETTINGS 
+#
+# Note: use environment variable on build command to include analytics
+# JEKYLL_ENV=production jekyll build
+# (this is done automatically by gh-pages build)
+#
+# ignore stuff
+exclude: [docs/, Rakefile, rakelib/, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md]
+# compress CSS output
+sass:
+  style: compressed
